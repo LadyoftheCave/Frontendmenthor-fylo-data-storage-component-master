@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .container {
+      position: relative;
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <section>
+    <div class="containerleft container">
+      <div class="containerleftupper">
+        <img src="images/logo.svg" alt="">
+      </div>
+      <div class="containerleftdown">
+        <div class="document imagebackgr"><img src="images/icon-document.svg" alt=""></div>
+        <div class="map imagebackgr"><img src="images/icon-folder.svg" alt=""></div>
+        <div class="cloud imagebackgr"><img src="images/icon-upload.svg" alt=""></div>
+      </div>
+    </div>
+
+
+    <div class="containerright container">
+      <div class="gbtext">
+        <span class="pregular">You've used </span><span id="rangeValue" class="pbold"> 0 </span><span class="pbold"> GB
+        </span><span class="pregular">of
+          your storage</span>
+      </div>
+      <div class="balk"> <input class="range" type="range" name="" value="0" min="0" max="1000"
+          onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)">
+      </div>
+      <div class="rangetext">
+        <div class="rangetextleft">0 <span>GB</span></div>
+        <div class="rangetextright">1000 <span>GB</span> </div>
+      </div>
+
+      <div class="puntding">
+        <div class="punttekst"><span class="puntdinglarge" id="leftValue">0 </span><span class="puntdingsmall">GB
+            LEFT</span> </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+  <script>
+    function rangeSlide(value) {
+      document.getElementById('rangeValue').innerHTML = value;
+      document.getElementById('leftValue').innerHTML = 1000 - value;
+    }
+
+
+
+  </script>
+</body>
+
+</html>
